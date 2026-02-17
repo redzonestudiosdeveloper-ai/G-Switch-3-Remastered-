@@ -27,7 +27,9 @@
             );
         }
 
+        // =========================
         // Tam ekran fonksiyonu
+        // =========================
         function enterFullscreen() {
             let elem = document.documentElement;
             if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
@@ -41,9 +43,9 @@
             }
         }
 
-        // Sayfa yüklenince tam ekran
         window.addEventListener("load", function() {
             enterFullscreen();
+            enforceLandscape();
         });
 
         // A + B tuşları tam ekran
@@ -67,7 +69,6 @@
 
         document.addEventListener("keydown", function(e) {
             pauseKeys[e.key.toLowerCase()] = true;
-
             if (pauseKeys["s"] && pauseKeys["r"]) {
                 togglePause();
             }
@@ -79,7 +80,6 @@
 
         function togglePause() {
             let game = document.getElementById("openfl-content");
-
             if (!isPaused) {
                 game.style.filter = "grayscale(1)";
                 game.style.pointerEvents = "none";
@@ -140,6 +140,37 @@
                 enterFullscreen();
             }
         });
+
+        // =========================
+        // Landscape moduna zorla
+        // =========================
+        function enforceLandscape() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            const game = document.getElementById("openfl-content");
+
+            if (width < height) {
+                // Dikeyse oyun alanını 90 derece döndür
+                game.style.transform = "rotate(90deg)";
+                game.style.transformOrigin = "center center";
+                game.style.width = `${height}px`;
+                game.style.height = `${width}px`;
+                game.style.position = "absolute";
+                game.style.top = `${(height - width)/2}px`;
+                game.style.left = `${(width - height)/2}px`;
+            } else {
+                // Yatay ise normal
+                game.style.transform = "none";
+                game.style.width = "100%";
+                game.style.height = "100%";
+                game.style.position = "static";
+            }
+        }
+
+        // Pencere boyutu değiştiğinde otomatik kontrol
+        window.addEventListener("resize", enforceLandscape);
+        window.addEventListener("orientationchange", enforceLandscape);
+
     </script>
 
     <style>
