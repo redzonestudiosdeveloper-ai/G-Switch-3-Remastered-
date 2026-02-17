@@ -27,8 +27,7 @@ G-Switch 3 Remastered sürətli tempolu və yerəklimin dəyişdirilməsi mexani
 - The goal is to survive as long as possible or finish levels.  
 
 **Controls:**  
-- Arrow keys or WASD to move  
-- Space to jump or flip (depending on mode)  
+- Click the screen to jump or flip (depending on mode)  
 
 ---
 
@@ -52,12 +51,14 @@ G-Switch 3 Remastered sürətli tempolu və yerəklimin dəyişdirilməsi mexani
 
 ## 🛠️ Installation / Kurulum / Quraşdırma / 
   
-    Clone or download this repository.  
+ <!-- Clone or download this repository. -->
    ```bash
-   git clone https://github.com/redzonestudiosdeveloper-ai/G-Switch-3-Remastered-.git
-  
- cd /storage/emulated/0/path-to-the-file
-
- python3 -m http.server Write port here
-
- Congratulations on the local game is ready
+   git clone https://github.com/redzonestudiosdeveloper-ai/G-Switch-3-Remastered-.git 
+   ```
+  ```bash
+  cd /storage/emulated/0/path-to-the-file
+  ```
+  ```bash
+  python3 -m http.server 8080 
+  ```
+   <!-- Congratulations on the local game is ready -->
