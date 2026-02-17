@@ -2,23 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>GSwitch 3 Unblocked - ubg235 Poki</title>
+    <title>GSwitch 3 Unblocked - UBG235 (Yeni Güncel)</title>
     
+    <!-- Viewport ve mobil tam ekran -->
     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <link rel="shortcut icon" type="image/png" href="./favicon.png">
     
+    <!-- Oyun dosyaları -->
     <script type="text/javascript" src="./G-Switch3.js"></script>
     <script src="patch/js/poki-sdk.js"></script>
 
     <script>
-        // Dokunmatik hareketi engelle
+        // =====================================================
+        // 2026 Yeni Güncel Index.html
+        // Özellikler:
+        // 1. Otomatik tam ekran
+        // 2. Otomatik landscape mod
+        // 3. Dokunmatik kontrol ile oyun oynanabilir
+        // 4. Tam ekran ve landscape bir kez açıldıktan sonra çıkmaz
+        // 5. Çift tıklama veya touch ile tekrar tetiklenmez
+        // =====================================================
+
+        // Dokunmatik kaydırmayı engelle
         window.addEventListener("touchmove", function(event) { 
             event.preventDefault(); 
         }, { capture: false, passive: false });
 
-        // Yüksek çözünürlüklü cihazlar için scale ayarı
+        // Yüksek çözünürlüklü cihazlar için scale
         if (typeof window.devicePixelRatio !== 'undefined' && window.devicePixelRatio > 2) {
             var meta = document.getElementById("viewport");
             meta.setAttribute(
@@ -52,7 +64,7 @@
             const game = document.getElementById("openfl-content");
 
             if (width < height) {
-                // Dikeyse oyun alanını 90 derece döndür
+                // Dikeyse otomatik 90° döndür
                 game.style.transform = "rotate(90deg)";
                 game.style.transformOrigin = "center center";
                 game.style.width = `${height}px`;
@@ -61,7 +73,7 @@
                 game.style.top = `${(height - width)/2}px`;
                 game.style.left = `${(width - height)/2}px`;
             } else {
-                // Yatay ise normal
+                // Yatay mod
                 game.style.transform = "none";
                 game.style.width = "100%";
                 game.style.height = "100%";
@@ -114,9 +126,9 @@
         }
 
         // =========================
-        // Mouse tek tık space simülasyonu
+        // Dokunmatik ve mouse ile oyun kontrolü
         // =========================
-        document.addEventListener("click", function clickHandler() {
+        function clickHandler() {
             let event = new KeyboardEvent("keydown", {
                 key: " ",
                 code: "Space",
@@ -125,9 +137,9 @@
                 bubbles: true
             });
             document.dispatchEvent(event);
-        });
+        }
 
-        document.addEventListener("touchstart", function touchHandler() {
+        function touchHandler() {
             let event = new KeyboardEvent("keydown", {
                 key: " ",
                 code: "Space",
@@ -136,7 +148,10 @@
                 bubbles: true
             });
             document.dispatchEvent(event);
-        });
+        }
+
+        document.addEventListener("click", clickHandler);
+        document.addEventListener("touchstart", touchHandler);
 
     </script>
 
@@ -155,6 +170,7 @@
             background: #000;
         }
 
+        /* Font tanımları */
         @font-face {
             font-family: 'Meiryo UI';
             src: url('assets/data/MeiryoUI.woff') format('woff');
@@ -173,6 +189,7 @@
     <div id="openfl-content"></div>
     
     <script>
+        // Oyunu başlat
         lime.embed("G-Switch3", "openfl-content", 0, 0, { parameters: {} });
     </script>
 
