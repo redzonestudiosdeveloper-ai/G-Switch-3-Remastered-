@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>GSwitch 3 Unblocked - ubg235 Poki</title>
+    
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="shortcut icon" type="image/png" href="./favicon.png">
+    
+    <script type="text/javascript" src="./G-Switch3.js"></script>
+    <script src="patch/js/poki-sdk.js"></script>
+
+    <script>
+        // Dokunmatik hareketi engelle
+        window.addEventListener("touchmove", function(event) { 
+            event.preventDefault(); 
+        }, { capture: false, passive: false });
+
+        // Yüksek çözünürlüklü cihazlar için scale ayarı
+        if (typeof window.devicePixelRatio !== 'undefined' && window.devicePixelRatio > 2) {
+            var meta = document.getElementById("viewport");
+            meta.setAttribute(
+                'content',
+                'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no'
+            );
+        }
+
+        // Tam ekran fonksiyonu
+        function enterFullscreen() {
+            let elem = document.documentElement;
+            if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.webkitRequestFullscreen) {
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) {
+                    elem.msRequestFullscreen();
+                }
+            }
+        }
+
+        // Sayfa yüklenince tam ekran
+        window.addEventListener("load", function() {
+            enterFullscreen();
+        });
+
+        // A + B tuşları tam ekran
+        let fullscreenKeys = {};
+        document.addEventListener("keydown", function(e) {
+            fullscreenKeys[e.key.toLowerCase()] = true;
+            if (fullscreenKeys["a"] && fullscreenKeys["b"]) {
+                enterFullscreen();
+            }
+        });
+
+        document.addEventListener("keyup", function(e) {
+            fullscreenKeys[e.key.toLowerCase()] = false;
+        });
+
+        // =========================
+        // S + R ile pause sistemi
+        // =========================
+        let pauseKeys = {};
+        let isPaused = false;
+
+        document.addEventListener("keydown", function(e) {
+            pauseKeys[e.key.toLowerCase()] = true;
+
+            if (pauseKeys["s"] && pauseKeys["r"]) {
+                togglePause();
+            }
+        });
+
+        document.addEventListener("keyup", function(e) {
+            pauseKeys[e.key.toLowerCase()] = false;
+        });
+
+        function togglePause() {
+            let game = document.getElementById("openfl-content");
+
+            if (!isPaused) {
+                game.style.filter = "grayscale(1)";
+                game.style.pointerEvents = "none";
+                isPaused = true;
+            } else {
+                game.style.filter = "none";
+                game.style.pointerEvents = "auto";
+                isPaused = false;
+            }
+        }
+
+        // =========================
+        // Mouse tek tık kontrolü
+        // =========================
+        document.addEventListener("click", function() {
+            let event = new KeyboardEvent("keydown", {
+                key: " ",
+                code: "Space",
+                keyCode: 32,
+                which: 32,
+                bubbles: true
+            });
+            document.dispatchEvent(event);
+        });
+
+        // =========================
+        // Basılı tutunca zorla tam ekran
+        // =========================
+        let forceFullscreen = false;
+
+        function requestForceFullscreen() {
+            forceFullscreen = true;
+            enterFullscreen();
+        }
+
+        function stopForceFullscreen() {
+            forceFullscreen = false;
+        }
+
+        document.addEventListener("touchstart", function() {
+            requestForceFullscreen();
+        });
+
+        document.addEventListener("touchend", function() {
+            stopForceFullscreen();
+        });
+
+        document.addEventListener("mousedown", function() {
+            requestForceFullscreen();
+        });
+
+        document.addEventListener("mouseup", function() {
+            stopForceFullscreen();
+        });
+
+        document.addEventListener("fullscreenchange", function() {
+            if (forceFullscreen && !document.fullscreenElement) {
+                enterFullscreen();
+            }
+        });
+    </script>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background: #000;
+        }
+
+        #openfl-content {
+            width: 100%;
+            height: 100%;
+            background: #000;
+        }
+
+        /* Font tanımları */
+        @font-face {
+            font-family: 'Meiryo UI';
+            src: url('assets/data/MeiryoUI.woff') format('woff');
+        }
+        @font-face {
+            font-family: 'Verdana';
+            src: url('assets/data/verdana.woff') format('woff');
+        }
+    </style>
+</head>
+<body>
+    <noscript>
+        This webpage makes extensive use of JavaScript. Please enable JavaScript in your web browser.
+    </noscript>
+    
+    <div id="openfl-content"></div>
+    
+    <script>
+        // Oyunu başlat
+        lime.embed("G-Switch3", "openfl-content", 0, 0, { parameters: {} });
+    </script>
+
+    <script src="js/analytics_ubg_v1_4.js"></script>
+    <script src="js/ubg235_client_v1_1.js"></script>
+</body>
+</html>

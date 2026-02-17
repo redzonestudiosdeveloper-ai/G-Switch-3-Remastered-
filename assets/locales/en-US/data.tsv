@@ -1,0 +1,235 @@
+flag	content
+
+$LOADING	Yüklənir
+$PERIOD_PUNCTUATION	.
+$COLON_PUNCTUATION	:
+$DECIMAL_POINT	.
+$THOUSANDS_SEPARATOR	,
+
+$PLAY	Oyna
+$ENDLESS	Sonsuz
+$MULTIPLAYER	Çoxoyunçulu
+$CREDITS	Təşəkkürlər
+$BACK	Geri
+$SELECT_PLAYERS	Oyunçuları seç
+$NUMBER_OF_PLAYERS	Oyunçu sayı
+$STAGES	Səviyyələr
+$G-SWITCH_3	G-Switch 3
+$G-SWITCH_3_PLUS_LONG	G-Switch 3 Plus
+$G-SWITCH_3_PLUS_SHORT	G-Switch 3
+$G-SWITCH_2	G-Switch 2
+$G-SWITCH_1	G-Switch 1
+$CUSTOM_1	Xüsusi 1
+$CUSTOM_2	Xüsusi 2
+$CUSTOM_3	Xüsusi 3
+$SET	Təyin et...
+$NEVER-ENDING	Sonsuz
+$NO_POWERUPS	Gücləndirmə yoxdur
+$CLICK	Kliklə
+$MORE_OPTIONS	Daha çox seçim
+$STAGE_OPTIONS	Səviyyə seçimləri
+$PLAY_AGAINST_COMPUTER	Kompüterə qarşı oyna
+$SELECT_LEVEL	Səviyyə seç
+$STAGE_SELECTION	Səviyyə seçimi
+$CONTINUE	Davam et
+$MAIN_MENU	Əsas menyu
+$GAME_PAUSED	Oyun dayandırıldı
+$SECRET_ORB_FOUND	Gizli kürə tapıldı
+$CHARACTER_UNLOCKED	Yeni personaj açıldı!
+$LAST_CHARACTER_UNLOCKED	Son personaj açıldı! Bütün kürələr tapıldı!
+$BEST_TIME	Ən yaxşı<N>vaxt
+$NONE_CAPS	YOX
+$START_OVER	Yenidən başla
+$YES	Bəli
+$NO	Xeyr
+$CANCEL	Ləğv et
+$CONTINUE_QUESTION	Davam edilsin?
+$CONTINUE_PREVIOUS_GAME_QUESTION	Əvvəlki oyuna davam edilsin?
+$CHOOSE_NEW_KEY	Yeni düymə seç
+$PRESS_NEW_KEY	Yeni düyməni bas...
+$KEY_ALREADY_IN_USE	“<X>” artıq istifadə olunur.<N>Zəhmət olmasa başqa düymə seç.
+
+$WINNER	Qalib
+$TIE_EXCLAMATION	Bərabərə!
+$HAS_WON_THE_TOURNAMENT	turniri qazandı!
+$TWO_PLAYER_TIE	İki oyunçu<N>birinci yer üçün bərabərə qalıb!
+$THREE_PLAYER_TIE	Üç oyunçu<N>birinci yer üçün bərabərə qalıb!
+$FOUR_PLAYER_TIE	Dörd oyunçu<N>birinci yer üçün bərabərə qalıb!
+$FIVE_PLAYER_TIE	Beş oyunçu<N>birinci yer üçün bərabərə qalıb!
+$SIX_PLAYER_TIE	Altı oyunçu<N>birinci yer üçün bərabərə qalıb!
+$SEVEN_PLAYER_TIE	Yeddi oyunçu<N>birinci yer üçün bərabərə qalıb!
+$EIGHT_PLAYER_TIE	Səkkiz oyunçu<N>birinci yer üçün bərabərə qalıb!
+
+$TAP_ICONS_TO_ADD	Siyahıya əlavə etmək üçün səviyyə ikonlarına toxun
+$CLICK_ICONS_TO_ADD	Siyahıya əlavə etmək üçün səviyyə ikonlarına kliklə.
+
+$GS1_STAGE	GS1 Səviyyə <X>
+$GS2_STAGE	GS2 Səviyyə <X>
+$GS3_STAGE	GS3 Səviyyə <X>
+$GS1_STAGE_SHORT	GS1-<X>
+$GS2_STAGE_SHORT	GS2-<X>
+$GS3_STAGE_SHORT	GS3-<X>
+
+$CLICK_OR_PRESS_KEY_TO_FLIP	Çevirmək üçün kliklə və ya hər hansı düyməni bas
+$TAP_TO_FLIP	Haraya toxunsan, cazibə çevriləcək
+$TAP_TO_START	Başlamaq üçün toxun
+$TAP_TO_CONTINUE	Davam etmək üçün toxun
+$TAP_TO_START_NEW_TOURNAMENT	Yeni turnir başlatmaq üçün toxun
+$RANKINGS	Sıralama
+$FINAL_ROUND	Son raund
+$FINAL_ROUND_CAPS	SON RAUND
+$ROUND_X_OF_Y	Raund <X> / <Y>
+$ROUND_X	Raund <X>
+$FIRST_SUPERSCRIPT	ci
+$SECOND_SUPERSCRIPT	ci
+$THIRD_SUPERSCRIPT	cü
+$FOURTH_SUPERSCRIPT	cü
+$FIFTH_SUPERSCRIPT	ci
+$SIXTH_SUPERSCRIPT	cı
+$SEVENTH_SUPERSCRIPT	ci
+$EIGHTH_SUPERSCRIPT	ci
+$FIRST_BASELINE	1
+$SECOND_BASELINE	2
+$THIRD_BASELINE	3
+$FOURTH_BASELINE	4
+$FIFTH_BASELINE	5
+$SIXTH_BASELINE	6
+$SEVENTH_BASELINE	7
+$EIGHTH_BASELINE	8
+
+$PLAYER_1	Oyunçu 1
+$PLAYER_2	Oyunçu 2
+$PLAYER_3	Oyunçu 3
+$PLAYER_4	Oyunçu 4
+$TAP_HERE_CAPS	BURAYA TOXUN
+
+$PRESS_ENTER_TO_START	Başlamaq üçün ENTER bas
+$PRESS_ENTER_TO_CONTINUE	Davam etmək üçün ENTER bas
+$PRESS_ENTER_TO_START_OR_ESC	Yeni turnir üçün ENTER, ayarları dəyişmək üçün ESC bas
+
+$PRESS_SPACE_TO_START	Başlamaq üçün SPACE bas
+$PRESS_SPACE_TO_CONTINUE	Davam etmək üçün SPACE bas
+$PRESS_SPACE_TO_START_OR_ESC	Yeni turnir üçün SPACE, ayarları dəyişmək üçün ESC bas
+
+$LEVEL_X	Səviyyə <X>
+$LEVEL_1_DESCRIPTION	Lime şəhər mənzərəsi
+$LEVEL_2_DESCRIPTION	Qırmızı nəhəng
+$LEVEL_3_DESCRIPTION	Bənövşəyi xəyallar
+
+$SCORE	Xal
+$BEST_SCORE	Ən yaxşı
+$X_POINTS	<X> xal
+
+$END_DIALOG_1_1_LINE_1	Yenidən qarşılaşdıq.
+$END_DIALOG_1_1_LINE_2	 
+$END_DIALOG_1_1_LINE_3	Görürəm ki, bacarıqların
+$END_DIALOG_1_1_LINE_4	heç də zəifləməyib.
+
+$END_DIALOG_1_2_LINE_1	Bu çox asan idi!
+$END_DIALOG_1_2_LINE_2	 
+$END_DIALOG_1_2_LINE_3	Mənə nə atsan,
+$END_DIALOG_1_2_LINE_4	hər şeyə qalib gələcəyəm.
+
+$END_DIALOG_1_3_LINE_1	Haha! Sənin yerində olsam
+$END_DIALOG_1_3_LINE_2	bu qədər əmin olmazdım.
+$END_DIALOG_1_3_LINE_3	Görək növbəti
+$END_DIALOG_1_3_LINE_4	sınaqlarda nə edəcəksən.
+
+$END_DIALOG_2_1_LINE_1	 
+$END_DIALOG_2_1_LINE_2	Gördün? Uşaq oyuncağı idi!
+$END_DIALOG_2_1_LINE_3	 
+$END_DIALOG_2_1_LINE_4	 
+
+$END_DIALOG_2_2_LINE_1	Məncə bir az lovğalanmağa
+$END_DIALOG_2_2_LINE_2	başladın, dostum. Əminəm ki,
+$END_DIALOG_2_2_LINE_3	son sınaqlar
+$END_DIALOG_2_2_LINE_4	bunun qarşısını alacaq.
+
+$END_DIALOG_2_3_LINE_1	Çox danışıq, az hərəkət.
+$END_DIALOG_2_3_LINE_2	 
+$END_DIALOG_2_3_LINE_3	Gedək, hazıram!
+$END_DIALOG_2_3_LINE_4	 
+
+$END_DIALOG_2_4_LINE_1	Hazır olsan yaxşıdır.
+$END_DIALOG_2_4_LINE_2	 
+$END_DIALOG_2_4_LINE_3	Növbəti səviyyə zəif
+$END_DIALOG_2_4_LINE_4	ürəklilər üçün deyil.
+
+$END_DIALOG_3_1_LINE_1	BƏLİ!!!!!!
+$END_DIALOG_3_1_LINE_2	 
+$END_DIALOG_3_1_LINE_3	Bunu bacardım!!!
+$END_DIALOG_3_1_LINE_4	 
+
+$END_DIALOG_3_2_LINE_1	Əla! Etiraf etməliyəm ki,
+$END_DIALOG_3_2_LINE_2	buraya qədər gələcəyini
+$END_DIALOG_3_2_LINE_3	düşünmürdüm. Performansın
+$END_DIALOG_3_2_LINE_4	möhtəşəm idi.
+
+$END_DIALOG_3_3_LINE_1	Sən ildırım sürətli refleksləri
+$END_DIALOG_3_3_LINE_2	dəqiq hərəkətlərlə
+$END_DIALOG_3_3_LINE_3	birləşdirməyi bacardın.
+$END_DIALOG_3_3_LINE_4	Həqiqətən təsir edici idi.
+
+$END_DIALOG_3_4_LINE_1	Əgər hələ etməmisənsə,
+$END_DIALOG_3_4_LINE_2	özünü daha da sınamaq üçün
+$END_DIALOG_3_4_LINE_3	Sonsuz rejimi və ya
+$END_DIALOG_3_4_LINE_4	yerli çoxoyunçulu rejimi yoxla.
+
+$END_DIALOG_3_5_LINE_1	Təcrübə davam edəcək
+$END_DIALOG_3_5_LINE_2	vaxtı gələndə.
+$END_DIALOG_3_5_LINE_3	 
+$END_DIALOG_3_5_LINE_4	O vaxta qədər…
+
+$END_DIALOG_3_6_LINE_1	 
+$END_DIALOG_3_6_LINE_2	. . . . . .
+$END_DIALOG_3_6_LINE_3	 
+$END_DIALOG_3_6_LINE_4	 
+
+$CREDITS_LINE_1	Remastered dizaynı və proqramlaşdırma
+$CREDITS_LINE_2	Məlik Məmmədov
+$CREDITS_LINE_3	Qrafika
+$CREDITS_LINE_4	Əli Nəsirov
+$CREDITS_LINE_5	Mübariz Cəfərli
+$CREDITS_LINE_6	Musiqi və səs effektləri
+$CREDITS_LINE_7	Redzone Studios Music 
+
+$SETTINGS	Ayarlar
+$LANGUAGE	Dil
+$COMING_SOON	Tezliklə
+$RESTORE_PURCHASES	Alışları<N>bərpa et
+$MUSIC	Musiqi
+$SOUND	Səs
+$COMPUTER_CONTROLLED_ABBREVIATION	CPU
+$SCREENSHOT_TEXT_1	Lokal çoxoyunçu
+$SCREENSHOT_TEXT_2	4 oyunçuya qədər
+$REMOVE_ADS	Reklamları sil
+
+$GET_G-SWITCH_3_PLUS	G-Switch 3 Plus əldə et
+$G-SWITCH_3_PLUS_LINE_1	G-Switch 3 ilə açılacaq:
+$G-SWITCH_3_PLUS_LINE_2	 - 6 yeni çoxoyunçulu səviyyə
+$G-SWITCH_3_PLUS_LINE_3	 - G-Switch 2 və 1-dən bütün çoxoyunçulu səviyyələr
+$G-SWITCH_3_PLUS_LINE_4	 - Səviyyələri istədiyin sırada oyna
+$G-SWITCH_3_PLUS_LINE_5	 - “Sonsuz Turnir” və “Gücləndirməsiz” seçimləri
+$G-SWITCH_3_PLUS_LINE_6	 - Daha çox reklam yoxdur
+$G-SWITCH_3_PLUS_LINE_7	 - Gələcək bütün yeni səviyyələrə daimi giriş
+$G-SWITCH_3_PLUS_LINE_8_PRICE_X	Yalnız <X>
+$GET_IT_BUTTON	Al!
+$UNABLE_TO_CONNECT_GOOGLE_PLAY	Google Play-ə qoşulmaq mümkün olmadı.
+$CHECK_CONNECTION	Zəhmət olmasa internet bağlantını yoxla.
+$CONNECTING	Qoşulur...
+
+$REWARDED_AD_TITLE	Yavaş rejimi aktivləşdir
+$REWARDED_AD_DESCRIPTION	Növbəti cəhddə yavaş rejimi aktivləşdirmək üçün reklam izləyəsən?
+
+$LIVES	Can
+$REWARDED_AD_2_TITLE	Əlavə can qazan
+$REWARDED_AD_2_DESCRIPTION	Reklam izləyib əlavə can qazan?
+$REWARDED_AD_3_TITLE	Yavaş rejimi aktivləşdir
+$REWARDED_AD_3_DESCRIPTION	Növbəti cəhddə yavaş rejimi aktivləşdir?
+
+$PRESS_ANY_KEY_TO_CONTINUE	Davam etmək üçün hər hansı düyməni bas
+
+$ADS_OPT_IN_TITLE	TƏCRÜBƏNİZİ YAXŞILAŞDIRMAQ İSTƏYİRSİNİZ?
+$ADS_OPT_IN_DESCRIPTION	Sizə uyğun reklamlar göstərmək üçün məlumat toplayıb tərəfdaşlarımızla paylaşmağımız lazımdır.
+$ADS_OPT_IN_MORE	Daha çox məlumat üçün 
+$PRIVACY_POLICY	məxfilik siyasətimizə baxın
