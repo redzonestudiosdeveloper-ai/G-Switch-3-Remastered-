@@ -69,40 +69,32 @@
             }
         }
 
-        // Sayfa yüklendiğinde tam ekran ve landscape
-        window.addEventListener("load", function() {
+        // =========================
+        // Otomatik tam ekran ve landscape (sayfa yüklendiğinde)
+        // =========================
+        window.addEventListener("load", function autoFullscreenLandscape() {
             enterFullscreen();
             enforceLandscape();
+
+            // Artık click veya touch ile tekrar tam ekran veya landscape olmasın
+            document.removeEventListener("click", clickHandler);
+            document.removeEventListener("touchstart", touchHandler);
         });
 
+        // =========================
+        // Pencere boyutu veya yön değişince landscape zorla
+        // =========================
         window.addEventListener("resize", enforceLandscape);
         window.addEventListener("orientationchange", enforceLandscape);
 
         // =========================
-        // A + B tuşları tam ekran
-        // =========================
-        let fullscreenKeys = {};
-        document.addEventListener("keydown", function(e) {
-            fullscreenKeys[e.key.toLowerCase()] = true;
-            if (fullscreenKeys["a"] && fullscreenKeys["b"]) {
-                enterFullscreen();
-                enforceLandscape();
-            }
-        });
-        document.addEventListener("keyup", function(e) {
-            fullscreenKeys[e.key.toLowerCase()] = false;
-        });
-
-        // =========================
-        // S + R ile pause sistemi
+        // Pause sistemi (S + R)
         // =========================
         let pauseKeys = {};
         let isPaused = false;
         document.addEventListener("keydown", function(e) {
             pauseKeys[e.key.toLowerCase()] = true;
-            if (pauseKeys["s"] && pauseKeys["r"]) {
-                togglePause();
-            }
+            if (pauseKeys["s"] && pauseKeys["r"]) togglePause();
         });
         document.addEventListener("keyup", function(e) {
             pauseKeys[e.key.toLowerCase()] = false;
@@ -122,10 +114,9 @@
         }
 
         // =========================
-        // Mouse / Dokunmatik tık ile tam ekran ve landscape
+        // Mouse tek tık space simülasyonu
         // =========================
-        document.addEventListener("click", function() {
-            // Space tuşu simülasyonu
+        document.addEventListener("click", function clickHandler() {
             let event = new KeyboardEvent("keydown", {
                 key: " ",
                 code: "Space",
@@ -134,38 +125,17 @@
                 bubbles: true
             });
             document.dispatchEvent(event);
-
-            // Tam ekran ve landscape
-            enterFullscreen();
-            enforceLandscape();
         });
 
-        document.addEventListener("touchstart", function() {
-            enterFullscreen();
-            enforceLandscape();
-        });
-
-        // =========================
-        // Basılı tutunca zorla tam ekran
-        // =========================
-        let forceFullscreen = false;
-        function requestForceFullscreen() {
-            forceFullscreen = true;
-            enterFullscreen();
-            enforceLandscape();
-        }
-        function stopForceFullscreen() {
-            forceFullscreen = false;
-        }
-        document.addEventListener("touchstart", requestForceFullscreen);
-        document.addEventListener("touchend", stopForceFullscreen);
-        document.addEventListener("mousedown", requestForceFullscreen);
-        document.addEventListener("mouseup", stopForceFullscreen);
-        document.addEventListener("fullscreenchange", function() {
-            if (forceFullscreen && !document.fullscreenElement) {
-                enterFullscreen();
-                enforceLandscape();
-            }
+        document.addEventListener("touchstart", function touchHandler() {
+            let event = new KeyboardEvent("keydown", {
+                key: " ",
+                code: "Space",
+                keyCode: 32,
+                which: 32,
+                bubbles: true
+            });
+            document.dispatchEvent(event);
         });
 
     </script>
@@ -185,7 +155,6 @@
             background: #000;
         }
 
-        /* Font tanımları */
         @font-face {
             font-family: 'Meiryo UI';
             src: url('assets/data/MeiryoUI.woff') format('woff');
@@ -204,7 +173,6 @@
     <div id="openfl-content"></div>
     
     <script>
-        // Oyunu başlat
         lime.embed("G-Switch3", "openfl-content", 0, 0, { parameters: {} });
     </script>
 
