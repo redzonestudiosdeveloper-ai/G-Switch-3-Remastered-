@@ -43,106 +43,8 @@
             }
         }
 
-        window.addEventListener("load", function() {
-            enterFullscreen();
-            enforceLandscape();
-        });
-
-        // A + B tuşları tam ekran
-        let fullscreenKeys = {};
-        document.addEventListener("keydown", function(e) {
-            fullscreenKeys[e.key.toLowerCase()] = true;
-            if (fullscreenKeys["a"] && fullscreenKeys["b"]) {
-                enterFullscreen();
-            }
-        });
-
-        document.addEventListener("keyup", function(e) {
-            fullscreenKeys[e.key.toLowerCase()] = false;
-        });
-
         // =========================
-        // S + R ile pause sistemi
-        // =========================
-        let pauseKeys = {};
-        let isPaused = false;
-
-        document.addEventListener("keydown", function(e) {
-            pauseKeys[e.key.toLowerCase()] = true;
-            if (pauseKeys["s"] && pauseKeys["r"]) {
-                togglePause();
-            }
-        });
-
-        document.addEventListener("keyup", function(e) {
-            pauseKeys[e.key.toLowerCase()] = false;
-        });
-
-        function togglePause() {
-            let game = document.getElementById("openfl-content");
-            if (!isPaused) {
-                game.style.filter = "grayscale(1)";
-                game.style.pointerEvents = "none";
-                isPaused = true;
-            } else {
-                game.style.filter = "none";
-                game.style.pointerEvents = "auto";
-                isPaused = false;
-            }
-        }
-
-        // =========================
-        // Mouse tek tık kontrolü
-        // =========================
-        document.addEventListener("click", function() {
-            let event = new KeyboardEvent("keydown", {
-                key: " ",
-                code: "Space",
-                keyCode: 32,
-                which: 32,
-                bubbles: true
-            });
-            document.dispatchEvent(event);
-        });
-
-        // =========================
-        // Basılı tutunca zorla tam ekran
-        // =========================
-        let forceFullscreen = false;
-
-        function requestForceFullscreen() {
-            forceFullscreen = true;
-            enterFullscreen();
-        }
-
-        function stopForceFullscreen() {
-            forceFullscreen = false;
-        }
-
-        document.addEventListener("touchstart", function() {
-            requestForceFullscreen();
-        });
-
-        document.addEventListener("touchend", function() {
-            stopForceFullscreen();
-        });
-
-        document.addEventListener("mousedown", function() {
-            requestForceFullscreen();
-        });
-
-        document.addEventListener("mouseup", function() {
-            stopForceFullscreen();
-        });
-
-        document.addEventListener("fullscreenchange", function() {
-            if (forceFullscreen && !document.fullscreenElement) {
-                enterFullscreen();
-            }
-        });
-
-        // =========================
-        // Landscape moduna zorla
+        // Landscape modunu zorla
         // =========================
         function enforceLandscape() {
             const width = window.innerWidth;
@@ -167,9 +69,104 @@
             }
         }
 
-        // Pencere boyutu değiştiğinde otomatik kontrol
+        // Sayfa yüklendiğinde tam ekran ve landscape
+        window.addEventListener("load", function() {
+            enterFullscreen();
+            enforceLandscape();
+        });
+
         window.addEventListener("resize", enforceLandscape);
         window.addEventListener("orientationchange", enforceLandscape);
+
+        // =========================
+        // A + B tuşları tam ekran
+        // =========================
+        let fullscreenKeys = {};
+        document.addEventListener("keydown", function(e) {
+            fullscreenKeys[e.key.toLowerCase()] = true;
+            if (fullscreenKeys["a"] && fullscreenKeys["b"]) {
+                enterFullscreen();
+                enforceLandscape();
+            }
+        });
+        document.addEventListener("keyup", function(e) {
+            fullscreenKeys[e.key.toLowerCase()] = false;
+        });
+
+        // =========================
+        // S + R ile pause sistemi
+        // =========================
+        let pauseKeys = {};
+        let isPaused = false;
+        document.addEventListener("keydown", function(e) {
+            pauseKeys[e.key.toLowerCase()] = true;
+            if (pauseKeys["s"] && pauseKeys["r"]) {
+                togglePause();
+            }
+        });
+        document.addEventListener("keyup", function(e) {
+            pauseKeys[e.key.toLowerCase()] = false;
+        });
+
+        function togglePause() {
+            let game = document.getElementById("openfl-content");
+            if (!isPaused) {
+                game.style.filter = "grayscale(1)";
+                game.style.pointerEvents = "none";
+                isPaused = true;
+            } else {
+                game.style.filter = "none";
+                game.style.pointerEvents = "auto";
+                isPaused = false;
+            }
+        }
+
+        // =========================
+        // Mouse / Dokunmatik tık ile tam ekran ve landscape
+        // =========================
+        document.addEventListener("click", function() {
+            // Space tuşu simülasyonu
+            let event = new KeyboardEvent("keydown", {
+                key: " ",
+                code: "Space",
+                keyCode: 32,
+                which: 32,
+                bubbles: true
+            });
+            document.dispatchEvent(event);
+
+            // Tam ekran ve landscape
+            enterFullscreen();
+            enforceLandscape();
+        });
+
+        document.addEventListener("touchstart", function() {
+            enterFullscreen();
+            enforceLandscape();
+        });
+
+        // =========================
+        // Basılı tutunca zorla tam ekran
+        // =========================
+        let forceFullscreen = false;
+        function requestForceFullscreen() {
+            forceFullscreen = true;
+            enterFullscreen();
+            enforceLandscape();
+        }
+        function stopForceFullscreen() {
+            forceFullscreen = false;
+        }
+        document.addEventListener("touchstart", requestForceFullscreen);
+        document.addEventListener("touchend", stopForceFullscreen);
+        document.addEventListener("mousedown", requestForceFullscreen);
+        document.addEventListener("mouseup", stopForceFullscreen);
+        document.addEventListener("fullscreenchange", function() {
+            if (forceFullscreen && !document.fullscreenElement) {
+                enterFullscreen();
+                enforceLandscape();
+            }
+        });
 
     </script>
 
